@@ -1,0 +1,16 @@
+# Paper Trail — the dependencies stages 2 and 3 need, and nothing more.
+#
+# This file installs everything required by `evaluate.py`, `demo.py`,
+# `demo_pipeline.py`, `try_it.py`, `render_samples.py`, the web interface and
+# the whole test suite. No GPU, no model downloads, no network at run time.
+#
+# Stages 1, 4 and 5 — OCR, the tamper CNN and the explanation model — need
+# `requirements-gpu.txt` as well.
+#
+# Pinned to the versions every number in the README was measured on.
+# Python 3.12: PyTorch ships no CUDA wheels for 3.13 or 3.14.
+
+numpy==2.5.2
+pillow==12.3.0
+flask==3.1.3
+pytest==9.1.1

@@ -1,0 +1,21 @@
+# Paper Trail — the model stages. Install `requirements.txt` first.
+#
+# torch and torchvision must come from the CUDA index, not PyPI; the PyPI
+# wheels are CPU-only and will silently run every model on the CPU rather than
+# erroring:
+#
+#     pip install torch==2.6.0 torchvision==0.21.0 \
+#         --index-url https://download.pytorch.org/whl/cu124
+#
+# Then:  pip install -r requirements-gpu.txt
+#
+# Verified on a GTX 1650 (4 GB, SM 7.5), driver 592.82, torch 2.6.0+cu124.
+#
+# Note on llama-cpp-python: the prebuilt Windows wheel has no CUDA support, and
+# grammar-constrained sampling segfaults in 0.3.35. The explanation stage runs
+# on CPU and enforces output shape in Python instead. See README.
+
+easyocr==1.7.2
+transformers==4.44.2
+huggingface_hub==0.36.2
+llama-cpp-python==0.3.35

@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Rendered documents. Regenerate with `run docs`.
+out/
+*.png
+
+# ...but screenshots and figures used by the README are committed.
+!docs/**/*.png
+
+# Model weights: a 500MB GGUF and a 45MB CNN checkpoint.
+# Regenerate with `run tamper`; the GGUF downloads on first use.
+models/
+*.pt
+*.gguf
+
+# Training logs.
+*.log

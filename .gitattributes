@@ -1,0 +1,13 @@
+# Normalise line endings on commit. This was written on Windows; without this
+# every file lands in the repository with CRLF and diffs are unreadable to
+# anyone else.
+* text=auto eol=lf
+
+# Keep the Windows wrapper usable when checked out on Windows.
+*.bat text eol=crlf
+*.sh  text eol=lf
+
+*.png binary
+*.jpg binary
+*.pt  binary
+*.gguf binary
